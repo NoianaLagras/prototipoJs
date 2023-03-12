@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  /* Bootstrap*/
+  padding-left: 0px;
+}
+
+header {
+  width: 100%;
+  padding: 7px;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: #b8dac2;
+  z-index: 998;
+  /* */
+  /* menu check */
+}
+header .logoNombre {
+  padding: 5px;
+}
+header .logoNombre img {
+  width: 100px;
+  height: auto;
+}
+header .logoNombre h1 {
+  margin: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  border-right: 4px solid;
+  font-family: monospace;
+  font-size: 18px;
+  width: 15ch;
+  font-weight: 500;
+  animation: typing 1s steps(15), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+header nav {
+  width: 600px;
+}
+header .logoCarrito {
+  padding: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+header .logoCarrito h3 {
+  font-size: 50px;
+}
+header #iconHamburguesa {
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 35px;
+  font-size: 35px;
+  height: 100%;
+  display: none;
+  opacity: 0;
+}
+header #check {
+  display: none;
+}
+
+/* NavBars */
+.menu {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.menu li {
+  padding: 7px;
+  position: relative;
+  display: inline-block;
+}
+.menu li a {
+  color: rgb(34, 32, 32);
+  font-size: 18px;
+}
+.menu li:hover {
+  transition: 0.2s;
+  -webkit-text-decoration: underline crimson 3px;
+          text-decoration: underline crimson 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.menu .submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 0px 25px;
+  margin-top: 10px;
+}
+.menu .submenu.active {
+  display: block;
+}
+
+footer {
+  background-color: rgb(48, 48, 48);
+  padding: 50px;
+  color: white;
+  text-align: center;
+}
+footer p {
+  font-size: 25px;
+}/*# sourceMappingURL=main.css.map */
