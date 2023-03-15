@@ -1,3 +1,8 @@
+const verCarrito = document.getElementById("verCarrito")
+const modalContainer = document.getElementById("modalContainer")
+const cantidadCarrito = document.getElementById("cantidadCarrito");
+
+
 const pintarCarrito= ()=> {
     modalContainer.innerHTML="";
     modalContainer.style.display="flex"
@@ -105,5 +110,20 @@ carritoContador();
 const irApagar =  document.createElement("span")
 irApagar.className="irApagar"
 irApagar.innerHTML =`
-<a href="pages/checkout.html" target="_blank">Ir al Checkout</a>
+<a href="#">Ir al Checkout</a>
 `
+irApagar.addEventListener("click", ( )=>{
+        Swal.fire({
+          title: 'Desea completar su compra?',
+          icon: 'question',
+          showCancelButton: true,
+          confirmButtonColor: '#f12473',
+          cancelButtonColor: '#222121',
+          confirmButtonText: 'Confirm'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '/pages/checkout.html';
+          }
+        })
+    
+})

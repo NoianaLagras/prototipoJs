@@ -32,7 +32,7 @@ ul {
         .comprar{
             margin-bottom: 5px;
             padding: 5px;
-            background-color: #3EE657;
+            background-color: #222121;
             border-radius: 5px;
             color: rgb(255, 255, 255);
             border-color: rgba(22, 13, 1, 0.062);
@@ -54,7 +54,7 @@ ul {
 
 //contador en carrito
 .cantidad-carrito{
-    background-color: rgb(241, 36, 115);
+    background-color: #f12473;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     font-size: 20px;
@@ -172,4 +172,17 @@ ul {
 }
 
 
-
+.usuario{
+    height: 35px;
+    width: 150px;
+    border-bottom-left-radius: 15px;
+    align-items: center;
+    right: 0px;
+    position: absolute;
+    z-index: 1;
+    background-color: #b8dac2;
+    #nombreUsuario{
+        font-family: monospace;
+        font-size: 15px;
+    }
+}
