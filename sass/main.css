@@ -89,7 +89,6 @@ ul {
   overflow: auto;
   z-index: 999;
   top: 90px;
-  scrollbar-color: none;
 }
 .modalContainer img {
   width: 70px;
@@ -124,15 +123,7 @@ ul {
   margin: 1rem;
 }
 
-.delete-product {
-  cursor: pointer;
-}
-
-.sumar {
-  cursor: pointer;
-}
-
-.restar {
+.delete-product, .sumar, .restar {
   cursor: pointer;
 }
 
@@ -157,7 +148,7 @@ ul {
   right: 0px;
   position: absolute;
   z-index: 1;
-  background-color: #b8dac2;
+  background-color: rgba(184, 218, 194, 0.8823529412);
 }
 .usuario #nombreUsuario {
   font-family: monospace;
@@ -340,4 +331,50 @@ footer p {
 }
 .medidas .tablas h2 {
   font-weight: 700;
+}
+
+.fondoP {
+  background-image: url("../img/sobre2.webp");
+  margin: 50px auto;
+  padding: 70px 0px;
+}
+.fondoP .preguntas {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.534);
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px;
+}
+.fondoP .preguntas h2 {
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgba(0, 0, 0, 0.932);
+  text-decoration: underline;
+}
+.fondoP .preguntas .letras {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.932);
+}
+.fondoP .preguntas i {
+  margin-bottom: 30px;
+}
+.fondoP .preguntas .irA {
+  background-color: rgb(228, 78, 153);
+  color: black;
+  border: 10px;
+  padding: 5px;
+}
+
+.about {
+  margin: 50px auto;
+  background-image: url("../img/sobre1.webp");
+  padding: 50px;
+}
+.about .aboutUs {
+  text-align: center;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.699);
+  color: white;
+  padding: 40px;
 }/*# sourceMappingURL=main.css.map */

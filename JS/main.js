@@ -1,4 +1,3 @@
-//USUARIO
 const nombreUsuario = document.getElementById("nombreUsuario");
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -7,29 +6,39 @@ document.addEventListener("DOMContentLoaded", function() {
         nombreUsuario.textContent = nombreGuardado;
     }
 
-    Swal.fire({
-        title: "Bienvenido a Neathur Shop ",
-        text: "Por favor ingrese su nombre",
-        input: "text",
-        showCancelButton: true,
-        confirmButtonText: "Guardar",
-        cancelButtonText: "Cancelar",
-        inputValidator: nombre => {
-            if (!nombre) {
-                return "Por favor escriba tu nombre";
-            } else {
-                return undefined;
+    const alertaBienvenida = localStorage.getItem("alertaBienvenida");
+    if (!alertaBienvenida) {
+        Swal.fire({
+            title: "Bienvenido a Neathur Shop ",
+            text: "Por favor ingrese su nombre",
+            input: "text",
+            showCancelButton: true,
+            confirmButtonText: "Guardar",
+            cancelButtonText: "Cancelar",
+            inputValidator: nombre => {
+                if (!nombre) {
+                    return "Por favor escriba tu nombre";
+                } else {
+                    return undefined;
+                }
             }
-        }
-    })
-    .then(resultado => {
-        if (resultado.value) {
-            let nombre = resultado.value;
-            nombreUsuario.textContent = nombre;
-            localStorage.setItem("nombre", nombre);
-        }
-    });
+        })
+        .then(resultado => {
+            if (resultado.value) {
+                let nombre = resultado.value;
+                nombreUsuario.textContent = nombre;
+                localStorage.setItem("nombre", nombre);
+                localStorage.setItem("alertaBienvenida", true);
+            }
+        });
+    }
 });
+
+
+
+
+
+
 //Container
 const container = document.getElementById("container");
 
