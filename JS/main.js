@@ -39,16 +39,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//Container
-const container = document.getElementById("container");
 
 
 
-
-// Cards
+// carrito
 let carrito = JSON.parse (localStorage.getItem("Compra")) || [];
 
+// Cards
+
+let productos = [];
+//Llamar productos json
+fetch("/JS/productos.json")
+.then(response => response.json())
+
+.then (data =>{
+    productos = data;
+    crearCards(productos)
+})
+
+
+
+function crearCards () {
+
+    //Container
+const container = document.getElementById("container")
+
 productos.forEach((productos)=> {
+    
+
     let content = document.createElement("div");
     content.className="cards"
     content.innerHTML =`
@@ -93,15 +111,41 @@ comprar.addEventListener("click", ( )=>{
                 position: "left",
                 gravity:"bottom",
                 backgroundColor: "linear-gradient(to right, #F12473, #78DF97)",
-              }).showToast();
+                }).showToast();
     }
- 
+
     carritoContador();
     saveLocal();
     });
 });
 
+}
 
+//Function promise 
+function alertRedesSociales() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+          resolve();
+        }, 3 * 60 * 1000); 
+      }).then(function() {
+        Swal.fire({
+            title: 'Seguinos en nuestras redes sociales',
+            text : "Podras ver nuestras nuevas colecciones y hacer encargos personalizados",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#f12473',
+            cancelButtonColor: '#222121',
+            confirmButtonText: 'Confirm'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                window.open('https://facebook.com', '_blank');
+            }
+          })
+      });
+    }
+
+
+alertRedesSociales();
 
 
 // LocalStorage

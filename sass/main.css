@@ -366,6 +366,22 @@ footer p {
   padding: 5px;
 }
 
+.bg-light {
+  padding: 40px;
+}
+.bg-light .checkoutLogo {
+  color: rgb(15, 2, 2);
+  text-align: center;
+}
+.bg-light .checkoutLogo a img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+.bg-light h3 {
+  margin: 50px;
+}
+
 .about {
   margin: 50px auto;
   background-image: url("../img/sobre1.webp");
