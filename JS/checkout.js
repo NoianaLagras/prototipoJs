@@ -16,19 +16,7 @@ document.getElementById("submitBtn").addEventListener("click", function(event) {
         }
     });
 });
-app.post("/api/verify-captcha", function(req, res) {
-    const APIKEYs = "6Ldmgg4lAAAAABJvklF6QZA9jrBKqjvQNqtVEc4R";
-    const response = req.body.response;
-    fetch("https://www.google.com/recaptcha/api/siteverify", {
-        method: "POST",
-        body: "APIKEYs=" + APIKEYs + "&response=" + response,
-        headers: {"Content-Type": "application/x-www-form-urlencoded"}
-    }).then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        res.json({success: data.success});
-    });
-});
+
 
 
 
