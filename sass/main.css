@@ -484,4 +484,12 @@ footer p {
   background-color: rgba(0, 0, 0, 0.699);
   color: white;
   padding: 40px;
+}
+
+.checkoutMonto {
+  text-align: center;
+}
+.checkoutMonto .listaCheckout .producto-checkout {
+  display: inline-block;
+  padding: 15px;
 }/*# sourceMappingURL=main.css.map */

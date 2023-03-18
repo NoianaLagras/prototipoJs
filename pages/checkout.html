@@ -11,16 +11,18 @@
     <title>Neathur Shop | Checkout! </title>
 </head>
 <body  class="bg-light">
-     
   <div class="checkoutLogo">
         <a href="../index.html"><img src="../img/Logo.webp" alt="Logo"></a>
 <h1>Neathur Shop | Checkout</h1>
 <h2>Termine Su Compra aqui! </h2>
 </div>
 <div class="checkoutMonto">
-
+  <h4>Datos de su compra:</h4>
+<div class="listaCheckout"></div>
+<label for="envio">Desea agregar envio a domicilio?</label>
+<input type="checkbox" id="envioCheckbox">
 </div>
-<form class="row g-3">
+<form class="row g-3" id="formularioCheckout">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Por favor ingrese su nombre de usuario</label>
     <input type="email" class="form-control" id="inputEmail4">

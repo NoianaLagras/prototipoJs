@@ -1,7 +1,14 @@
 // Contacto form
-function borrarCampos() {
-    document.getElementById("miFormulario").reset();
-  }
+const formulario = document.getElementById("miFormulario")
+formulario.addEventListener("submit", (e) =>{
+  e.preventDefault();
+  const nombre = document.getElementById("Nombre").value;
+  const correo = document.getElementById("correo").value;
+  const telefono = document.getElementById("cel").value;
+  const mensaje = document.getElementById("comentario").value;
+
+})
+
 
     const contacto = document.getElementById("alertContacto");
   
