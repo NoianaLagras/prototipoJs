@@ -114,7 +114,7 @@ irApagar.innerHTML =`
 `
 irApagar.addEventListener("click", ( )=>{
         Swal.fire({
-          title: 'Desea completar su compra?',
+          title: 'Desea ir al checkout?',
           icon: 'question',
           showCancelButton: true,
           confirmButtonColor: '#f12473',

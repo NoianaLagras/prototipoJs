@@ -213,9 +213,6 @@ header .logoCarrito h3 {
 header #iconHamburguesa {
   color: white;
   position: fixed;
-  right: 0;
-  top: 35px;
-  font-size: 35px;
   height: 100%;
   display: none;
   opacity: 0;
@@ -270,6 +267,100 @@ footer p {
   font-size: 25px;
 }
 
+@media (max-width: 850px) {
+  .containerItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 7px;
+    width: 90%;
+    margin: 30px auto;
+  }
+  .containerItems .cards {
+    margin: 30px 15px;
+  }
+  .containerItems .cards .comprar {
+    margin-bottom: 5px;
+    padding: 3px;
+  }
+  .containerItems .cards .comprar:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+    text-transform: uppercase;
+  }
+  header {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    justify-content: space-around;
+  }
+  header .logoNombre h1 {
+    display: none;
+  }
+  header .logoNombre img {
+    width: 150px;
+  }
+  header #iconHamburguesa {
+    display: flex;
+    opacity: 1;
+    top: 70px;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  header .menu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    padding: 10px;
+    top: 150px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.925);
+    transition: all 0.5s;
+  }
+  header .menu li {
+    text-align: start;
+    margin: 30px;
+    display: block;
+    line-height: 20px;
+    margin: 10px 0px;
+    transition: all 0.5s;
+    padding: 15px;
+  }
+  header #check:checked ~ .menu {
+    opacity: 1;
+    height: 80%;
+    visibility: visible;
+  }
+  header .submenu {
+    display: none;
+  }
+  .modalContainer img {
+    width: 35px;
+  }
+  .modalContainer h3 {
+    font-size: 18px;
+  }
+  .paginaDeContacto {
+    padding: 15px;
+  }
+  .paginaDeContacto .contacto {
+    font-size: 1.2rem;
+    padding: 0px;
+    width: 100%;
+  }
+  .paginaDeContacto .contacto h2 {
+    font-size: 2rem;
+  }
+  .paginaDeContacto .contacto input {
+    width: 45%;
+    margin-bottom: 15px;
+  }
+  .paginaDeContacto .contacto textarea {
+    width: 50%;
+  }
+}
 .paginaDeContacto {
   background-image: url("/img/contacto.webp");
   margin: 50px auto;
